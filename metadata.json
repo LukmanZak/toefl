@@ -1,0 +1,8 @@
+{
+  "name": "TOEFL Mastery: The Academic Curator",
+  "description": "A high-end, editorial-style TOEFL preparation platform featuring AI-powered practice, interactive flashcards, and curated academic modules.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}

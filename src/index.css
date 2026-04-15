@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Manrope", sans-serif;
+  
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-surface: var(--surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+}
+
+:root {
+  --primary: #312e81;
+  --secondary: #85ddf8;
+  --surface: #ffffff;
+  --surface-variant: #f8fafc;
+  --card: #f1f5f9;
+  --text: #0f172a;
+  --text-muted: #030303;
+  --border: #e2e8f0;
+}
+
+.dark {
+  --primary: #818cf8;
+  --secondary: #d97706;
+  --surface: #020617;
+  --surface-variant: #0f172a;
+  --card: #0f172a;
+  --text: #f8fafc;
+  --text-muted: #ffffff;
+  --border: #1e293b;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-text font-sans antialiased transition-colors duration-300;
+    background-image: radial-gradient(var(--border) 0.5px, transparent 0.5px);
+    background-size: 32px 32px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.glass-panel {
+  @apply bg-card/80 backdrop-blur-xl border border-border;
+}
+
+.card-base {
+  @apply bg-card border border-border rounded-[2rem] shadow-sm;
+}
+
+.markdown-body h2 {
+  @apply text-2xl font-bold text-primary mb-4 mt-6;
+}
+
+.markdown-body p {
+  @apply text-text-muted leading-relaxed mb-4;
+}
+
+.markdown-body ul {
+  @apply list-disc pl-6 mb-4 text-text-muted;
+}
+
+.markdown-body li {
+  @apply mb-2;
+}
+
+.markdown-body strong {
+  @apply font-bold text-primary;
+}
+
+.markdown-body code {
+  @apply bg-surface-variant px-1.5 py-0.5 rounded text-secondary font-mono text-xs;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
